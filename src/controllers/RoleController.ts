@@ -57,7 +57,7 @@ export class RoleController implements IEntityController{
 
         const errors = await validate(role);
         if (errors.length > 0){
-            throw new Error (errors.map(err => Object.values(err.constraints || {})).join(",")); // need to learn
+            throw new Error (errors.map(err => Object.values(err.constraints || {})).join(","));
         }
 
         const newRole = await this.roleRepository.save(role);
@@ -103,7 +103,7 @@ export class RoleController implements IEntityController{
         const errors = await validate(role);
 
         if (errors.length > 0){
-            throw new Error (errors.map(err => Object.values(err.constraints || {})).join(",")); // need to learn
+            throw new Error (errors.map(err => Object.values(err.constraints || {})).join(","));
         }
 
         const updatedRole = await this.roleRepository.save(role);
