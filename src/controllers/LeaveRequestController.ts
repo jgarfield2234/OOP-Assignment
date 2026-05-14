@@ -7,7 +7,7 @@ import { LeaveRequest, LeaveStatus } from "../entity/LeaveRequest";
 import { User } from "../entity/User";
 import { ResponseHandler } from "../helpers/ResponseHandler";
 import { AppError } from "../helpers/AppError";
-import { IEntityController } from "../types/IEntityController";
+import { IEntityController } from "../Types/IEntityController";
 import { LeaveRequestHelper } from "../helpers/LeaveRequestHelper";
 import { UserManagement } from "../entity/UserManagement";
 

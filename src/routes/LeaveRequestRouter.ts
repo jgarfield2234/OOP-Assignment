@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { IRouter } from "../types/IRouter";
-import { IEntityController } from "../types/IEntityController";
+import { IRouter } from "../Types/IRouter";
+import { IEntityController } from "../Types/IEntityController";
 import { Authorisation } from "../Middleware/Authorisation";
 
 export class LeaveRequestRouter implements IRouter {

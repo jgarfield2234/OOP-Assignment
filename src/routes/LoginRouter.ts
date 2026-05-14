@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { ILoginController } from "../types/ILoginController";
-import { IRouter } from "../types/IRouter";
+import { ILoginController } from "../Types/ILoginController";
+import { IRouter } from "../Types/IRouter";
 
 export class LoginRouter implements IRouter{
 

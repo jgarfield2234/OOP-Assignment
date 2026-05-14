@@ -6,7 +6,7 @@ import { StatusCodes } from 'http-status-codes';
 import { ResponseHandler } from '../helpers/ResponseHandler';
 import { validate } from 'class-validator';
 import { AppError } from '../helpers/AppError';
-import { IEntityController } from '../types/IEntityController';
+import { IEntityController } from '../Types/IEntityController';
 
 export class RoleController implements IEntityController{
     constructor(private roleRepository:Repository<Role>) {}

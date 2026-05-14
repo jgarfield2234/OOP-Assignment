@@ -1,6 +1,6 @@
 import { AppDataSource } from '../data_source';
 import { User } from '../entity/User';
-import { UserDTOToken } from '../UserDTOToken';
+import { UserDTOToken } from '../Types/UserDTOToken';
 import { Repository } from "typeorm";
 import { ResponseHandler } from '../helpers/ResponseHandler';
 import { Request, Response } from 'express';
@@ -8,7 +8,7 @@ import { instanceToPlain } from "class-transformer";
 import { StatusCodes } from 'http-status-codes';
 import { PasswordHandler } from '../helpers/PasswordHandler';
 import jwt from 'jsonwebtoken';
-import { ILoginController } from '../types/ILoginController';
+import { ILoginController } from '../Types/ILoginController';
 import { AppError } from '../helpers/AppError';
 
 export class LoginController implements ILoginController {

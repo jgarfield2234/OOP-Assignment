@@ -1,6 +1,6 @@
 import { Response, NextFunction } from "express";
 import jwt from "jsonwebtoken";
-import { IAuthenticatedJWTRequest } from "../types/IAuthenticatedJWTRequests";
+import { IAuthenticatedJWTRequest } from "../Types/IAuthenticatedJWTRequests";
 import { Logger } from "./Logger";
 import { ResponseHandler } from "./ResponseHandler";
 import { StatusCodes } from "http-status-codes";

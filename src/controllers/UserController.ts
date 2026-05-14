@@ -6,8 +6,8 @@ import { StatusCodes } from "http-status-codes";
 import { validate } from "class-validator";
 import { instanceToPlain } from "class-transformer";
 import { AppError } from "../helpers/AppError";
-import { IEntityController } from "../types/IEntityController";
-import { IGetByEmail } from "../types/IGetByEmail";
+import { IEntityController } from "../Types/IEntityController";
+import { IGetByEmail } from "../Types/IGetByEmail";
 
 export class UserController implements IEntityController, IGetByEmail {
     constructor(private userRepository: Repository<User>) {}

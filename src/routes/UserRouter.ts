@@ -1,7 +1,7 @@
 import { Router } from "express";
-import { IRouter } from "../types/IRouter";
-import { IEntityController } from "../types/IEntityController";
-import { IGetByEmail } from "../types/IGetByEmail";
+import { IRouter } from "../Types/IRouter";
+import { IEntityController } from "../Types/IEntityController";
+import { IGetByEmail } from "../Types/IGetByEmail";
 import { Authorisation } from "../Middleware/Authorisation";
 
 

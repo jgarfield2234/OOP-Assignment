@@ -6,7 +6,7 @@ import { instanceToPlain } from "class-transformer";
 import { User } from "../entity/User";
 import { ResponseHandler } from "../helpers/ResponseHandler";
 import { AppError } from "../helpers/AppError";
-import { IEntityController } from "../types/IEntityController";
+import { IEntityController } from "../Types/IEntityController";
 import { UserManagement } from "../entity/UserManagement";
 
 export class UserManagementController implements IEntityController {
