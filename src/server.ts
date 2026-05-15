@@ -1,13 +1,6 @@
 import express, { Request, Response, NextFunction } from "express";
 import { DataSource } from "typeorm";
-import { LoginRouter } from "./routes/LoginRouter"
-import { RoleRouter } from "./routes/RoleRouter";
-import { UserRouter } from "./routes/UserRouter";
-import { StatusCodes } from "http-status-codes";
 import { Logger } from "./helpers/Logger";
-import { ResponseHandler } from "./helpers/ResponseHandler";
-import jwt from 'jsonwebtoken';
-import { IAuthenticatedJWTRequest } from "./Types/IAuthenticatedJWTRequests";
 import { IRouter } from "./Types/IRouter";
 import { AppError } from "./helpers/AppError";
 import { ErrorHandler } from "./Middleware/ErrorHandler";
@@ -36,12 +29,6 @@ export class Server {
 
     private initializeRoutes() {
         console.log("Registering routes");
-
-        // Test route
-        this.app.get("/api/users-test", (req, res) => {
-            console.log("Users test route hit");
-            res.send("Users test route works");
-        });
 
         for (const route of this.routers){
             if (route.authenticate){
@@ -72,7 +59,7 @@ export class Server {
             console.log("Attempting connection")
             await this.appDataSource.initialize();
             Logger.info("Data Source has been initialized!");
-            console.log("Runninhg")
+            console.log("Running")
         } catch (error) {
             Logger.error("Error during Data Source initialization:", error);
             console.log("Error with initialising")
@@ -80,8 +67,3 @@ export class Server {
         }
     }
 }
-
-
-
-// Could potentially add rate limiting if extra time?? --> Doc 3 of security lecture 
-// Could potentially add log route access if extra time??

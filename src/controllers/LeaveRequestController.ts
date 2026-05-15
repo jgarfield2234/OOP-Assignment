@@ -96,7 +96,7 @@ export class LeaveRequestController implements IEntityController {
                 StatusCodes.BAD_REQUEST
             );
         }
-// Checks to make sure enough annual leave and also for overlap
+
         const requestedDays = LeaveRequestHelper.calculateLeaveDays(startDate, endDate);
 
         if (requestedDays > Number(user.annualLeaveBalance)){
@@ -245,8 +245,6 @@ export class LeaveRequestController implements IEntityController {
             throw new AppError("Leave request not found", StatusCodes.NOT_FOUND);
         }
 
-        // Checking if request is already approved/if enough balance is remaining
-
         if (leaveRequest.status === LeaveStatus.APPROVED){
             throw new AppError("Leave request already approved", StatusCodes.BAD_REQUEST)
         }
@@ -320,8 +318,6 @@ export class LeaveRequestController implements IEntityController {
         if (!leaveRequest) {
             throw new AppError("Leave request not found", StatusCodes.NOT_FOUND);
         }
-
-        // leaveRequest.status = LeaveStatus.CANCELLED;
 
         if (leaveRequest.status === LeaveStatus.CANCELLED) {
             throw new AppError("Leave request already cancelled", StatusCodes.BAD_REQUEST);

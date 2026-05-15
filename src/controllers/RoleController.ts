@@ -1,5 +1,4 @@
 import { Request, response, Response } from 'express';
-import { AppDataSource } from '../data_source';
 import { Role } from '../entity/Role';
 import { Repository } from "typeorm";
 import { StatusCodes } from 'http-status-codes';
@@ -11,12 +10,10 @@ import { IEntityController } from '../Types/IEntityController';
 export class RoleController implements IEntityController{
     constructor(private roleRepository:Repository<Role>) {}
 
-    // Get all Roles
     public getAll = async (req: Request, res: Response): Promise<void> =>{
     
         const roles = await this.roleRepository.find();
 
-        // Error handling for no content
         if (roles.length === 0) {
             throw new AppError("No content found", StatusCodes.NO_CONTENT)
         }
@@ -25,10 +22,8 @@ export class RoleController implements IEntityController{
         
     };
 
-    // Get Role by ID
     public getById = async (req: Request, res: Response): Promise<void> => {
         
-        // Error handling to check if ID is a valid number
         const id = parseInt(req.params.id as string);
 
         if (isNaN(id)) {
@@ -39,7 +34,6 @@ export class RoleController implements IEntityController{
 
         const role = await this.roleRepository.findOne({ where: { id: id }});
 
-        // Error handling for role not found
         if (!role) {
             throw new AppError(`Role not found with ID: ${id}`)
         }
@@ -49,7 +43,6 @@ export class RoleController implements IEntityController{
 
     };
     
-    // CREATE
     public create = async (req: Request, res: Response): Promise<void> => {
             
         const role = new Role()
@@ -65,7 +58,6 @@ export class RoleController implements IEntityController{
 
     }
 
-    // DELETE
     public delete = async (req: Request, res: Response): Promise <void> => {
 
         const id = req.params.id;
@@ -83,7 +75,6 @@ export class RoleController implements IEntityController{
         ResponseHandler.sendSuccessResponse(res, "Role deleted")
     }
 
-    // UPDATE
     public update = async(req: Request, res: Response): Promise <void> => {
         const id = parseInt(req.params.id as string);
         const name = req.body.name;

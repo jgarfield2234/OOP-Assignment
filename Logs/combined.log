@@ -358,3 +358,10 @@
 {"0":"2","1":"0","10":"T","11":"2","12":"1","13":":","14":"3","15":"4","16":":","17":"1","18":"2","19":".","2":"2","20":"4","21":"4","22":"9","23":"Z","3":"6","4":"-","5":"0","6":"5","7":"-","8":"1","9":"1","level":"error","message":"Error: You are not authorised to access this endpoint","timestamp":"2026-05-11 22:34:12"}
 {"level":"error","message":"You are not authorised to access this endpoint","timestamp":"2026-05-11 22:35:04"}
 {"0":"2","1":"0","10":"T","11":"2","12":"1","13":":","14":"3","15":"5","16":":","17":"0","18":"4","19":".","2":"2","20":"6","21":"7","22":"4","23":"Z","3":"6","4":"-","5":"0","6":"5","7":"-","8":"1","9":"1","level":"error","message":"Error: You are not authorised to access this endpoint","timestamp":"2026-05-11 22:35:04"}
+{"code":"ECONNREFUSED","fatal":true,"level":"error","message":"Error during Data Source initialization:","stack":"AggregateError\n    at internalConnectMultiple (node:net:1134:18)\n    at afterConnectMultiple (node:net:1715:7)","timestamp":"2026-05-15 14:39:14"}
+{"level":"info","message":"Data Source has been initialized!","timestamp":"2026-05-15 14:40:35"}
+{"level":"info","message":"Server is running on port 8900","timestamp":"2026-05-15 14:40:35"}
+{"level":"error","message":"Not authorised - Token is invalid","timestamp":"2026-05-15 14:45:14"}
+{"0":"2","1":"0","10":"T","11":"1","12":"3","13":":","14":"4","15":"5","16":":","17":"1","18":"4","19":".","2":"2","20":"7","21":"0","22":"0","23":"Z","3":"6","4":"-","5":"0","6":"5","7":"-","8":"1","9":"5","level":"error","message":"Error: Not authorised - Token is invalid","timestamp":"2026-05-15 14:45:14"}
+{"level":"error","message":"Not authorised - Token not found","timestamp":"2026-05-15 14:45:40"}
+{"0":"2","1":"0","10":"T","11":"1","12":"3","13":":","14":"4","15":"5","16":":","17":"4","18":"0","19":".","2":"2","20":"5","21":"1","22":"0","23":"Z","3":"6","4":"-","5":"0","6":"5","7":"-","8":"1","9":"5","level":"error","message":"Error: Not authorised - Token not found","timestamp":"2026-05-15 14:45:40"}

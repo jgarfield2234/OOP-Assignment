@@ -2,7 +2,6 @@ import { Request, Response, NextFunction } from "express";
 import { StatusCodes } from "http-status-codes";
 import jwt from "jsonwebtoken";
 import { AppError } from "../helpers/AppError";
-import { STATUS_CODES } from "node:http";
 
 export class Authorisation {
 
